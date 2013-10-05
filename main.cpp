@@ -21,30 +21,20 @@
 //THE SOFTWARE.
 
 #include "scene.h"
-#include <stdio.h>
 #include <iostream>
+using namespace std;
 
-//#define DEBUG
-
-int main(int argv, char **argc)
+int main(int argc, char** argv)
 {
-	//SCENE Scene(argc[1]);
 
-#ifdef DEBUG
-		SCENE Scene("table.txt");
-		Scene.render();
-#endif
+if(argc < 2 || argc > 10)
+{
+	cout << "Please enter the correct name of the data file\n";
+	return 1;
+}
 
-#ifndef DEBUG
-		if(argv < 2 || argv > 10)
-		{
-			cout << "Please enter a correct name of the data file\n";
-			return 1;
-		}
-
-		SCENE Scene(argc[1]);
-		Scene.render();
-#endif
+SCENE Scene(argv[1]);
+Scene.render();
 	
 	return 0;
 }
