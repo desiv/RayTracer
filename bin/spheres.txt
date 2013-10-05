@@ -1,0 +1,68 @@
+size 640 480 
+camera 0 0 0 0 0 -20 0 1 0 45
+
+antialiasing 4
+
+#directional 0.57735027 -0.57735027 -0.57735027 1 1 1
+#directional 0.57735027  0.57735027 -0.57735027 0 0 1
+
+attenuation 1 0 0
+
+point 5 10 -15 1 1 1
+
+attenuation 1 0.1 0.05
+
+point 5 -10 -15 0 0 1
+
+ # Global ambient light
+ambient .1 .1 .1 
+
+
+# 1 Sphere
+diffuse 1 0 1
+specular 1 1 1
+shininess 200
+
+pushTransform
+translate 0 0 -20
+sphere 0 0 0 3
+popTransform
+
+# 2 Sphere
+diffuse 1 1 0
+specular 1 1 1
+shininess 200
+
+pushTransform
+translate -2 2 -15
+sphere 0 0 0 1
+popTransform
+
+
+
+# 3 Sphere
+diffuse 0 1 1
+specular 1 1 1
+shininess 200
+
+pushTransform
+translate -2 -2 -15
+rotate 0 1 0 90
+scale 1 2 1
+sphere 0 0 0 1
+popTransform
+
+
+# 1 Triangle
+diffuse .1 .1 .1
+specular 1 1 1
+reflection .8 .8 .8
+shininess 200
+
+vertex 6 -1 -20
+vertex 1 4 -20
+vertex 5 5 -17
+
+#pushTransform
+tri 0 1 2
+#popTransform
