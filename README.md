@@ -1,4 +1,0 @@
-RayTracer
-=========
-
-Simple ray tracer
