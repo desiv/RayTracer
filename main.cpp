@@ -26,7 +26,6 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-
 if(argc < 2 || argc > 10)
 {
 	cout << "Please enter the correct name of the data file\n";
